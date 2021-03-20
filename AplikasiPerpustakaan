@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.AplikasiPerpustakaan;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+/**
+ *
+ * @author Outstanding Student
+ */
+public class AplikasiPerpustakaan {
+    public static void main(String [] args){
+        JFrame form = new JFrame("Aplikasi Perpustakaan");
+        form.setSize(450,400);  
+        form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        form.setLocationRelativeTo(null);
+        form.setLayout(null);
+       
+        
+        JLabel labelJudul = new JLabel("APLIKASI PERPUSTAKAAN");
+        labelJudul.setBounds(120, 30, 150, 30);
+        form.add(labelJudul);
+        
+        JLabel labelNamaBuku = new JLabel("Nama Buku");
+        labelNamaBuku.setBounds(20, 80, 150, 25);
+        form.add(labelNamaBuku);
+        
+        JTextField txtNamaBuku = new JTextField();
+        txtNamaBuku.setBounds(150, 80, 150, 25);
+        form.add(txtNamaBuku);
+        
+        JLabel labelKodeBuku = new JLabel("Kode Buku");
+        labelKodeBuku.setBounds(20, 110, 150, 25);
+        form.add(labelKodeBuku);
+        
+        JTextField txtKodeBuku = new JTextField();
+        txtKodeBuku.setBounds(150, 110, 150, 25 );
+        form.add(txtKodeBuku);
+        
+        JLabel labelJenisBuku = new JLabel("Jenis Buku");
+        labelJenisBuku.setBounds(20, 140, 150, 25);
+        form.add(labelJenisBuku);
+        
+        String Jenis[] = {"Pilih Jenis  Buku", "Buku fiksi", "Buku non-fiksi"};
+        JComboBox cbJenis = new JComboBox(Jenis);
+        cbJenis.setBounds(150, 140, 150, 25);
+        form.add(cbJenis);
+        
+        JButton buttonCari = new JButton("Cari");
+        buttonCari.setBounds(150, 270, 80, 25);
+        form.add(buttonCari);
+        
+        JButton buttonReset = new JButton("Reset");
+        buttonReset.setBounds(250, 270, 75, 25);
+        form.add(buttonReset);
+        
+        form.setVisible(true);
+        
+        }
+    }
